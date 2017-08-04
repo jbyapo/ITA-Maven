@@ -34,5 +34,34 @@ public class testMavenJUnit {
 		int quotient = testMavenClass.division(20, 20);
 		assertEquals(1, quotient);
 	}
+	
+	@Test
+	public void testNumber1() {
+		String result = testMavenClass.number1();
+		assertEquals("default", result);
+	}
+	
+	@Test
+	public void testNumber2() {
+		int result = testMavenClass.number2();
+		assertEquals(8, result);
+	}
+	
+	@Test
+	public void testNumber3() {
+		int result = testMavenClass.number3();
+		assertEquals(28, result);
+	}
+	
+	@Test
+	public void testNumber4() {
+		testMavenClass.number4();
+	}
+	
+	@Test
+	public void testNumber7() {
+		int result = testMavenClass.number7(60);
+		assertEquals(5, result);
+	}
 
 }
