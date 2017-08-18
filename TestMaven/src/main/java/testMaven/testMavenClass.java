@@ -6,13 +6,14 @@ public class testMavenClass {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(addition(45, 2));
-		System.out.println(subtraction(100, 0));
-		System.out.println(multiplication(48, 2));
-		System.out.println(division(48, 2));
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		System.out.println(addition(45, 2));
+//		System.out.println(subtraction(100, 0));
+//		System.out.println(multiplication(48, 2));
+//		System.out.println(division(48, 2));
+//		System.out.println(truncateAInFirst2Positions("AACD"));
+//	}
 	
 	public static String number1() {
 		String result = null;
@@ -115,6 +116,30 @@ public class testMavenClass {
 	
 	public static int division(int x, int y) {
 		return x / y;
+	}
+	
+	public String truncateAInFirst2Positions(String str) {
+		if (str.length() <=2) {
+			return str.replaceAll("A", "");
+		}
+		String first2Chars = str.substring(0, 2);
+		String stringMinusFirst2Chars = str.substring(2);
+		
+		return first2Chars.replaceAll("A", "") + stringMinusFirst2Chars;
+	}
+	
+	public boolean areFirstAndLastTwoCharactersTheSame(String str) {
+		if (str.length() <=1) {
+			return false;
+		}
+		if (str.length() ==2) {
+			return true;
+		}
+		
+		String first2Chars = str.substring(0, 2);
+		String last2Chars = str.substring(str.length() - 2);
+		
+		return first2Chars.equals(last2Chars);
 	}
 
 
